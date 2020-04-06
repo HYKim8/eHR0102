@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.sist.ehr</groupId>
+  <artifactId>eHR0102</artifactId>
+  <version>0.3</version>
+  <packaging>jar</packaging>
+
+  <name>eHR0102</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <oracle.jdbc.version>12.2.0.1</oracle.jdbc.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>    
+    <jog4j.version>1.2.17</jog4j.version>
+    <!-- lib source download -->
+    <downloadSources>true</downloadSources>
+    <!-- JavaDoc download -->
+    <downloadJavadocs>true</downloadJavadocs>
+  </properties>
+     
+ <!-- Oracle jdbc driver추가 -->
+ <repositories>
+  <repository>
+   <id>oracle</id>
+   <name>ORACLE JDBC Repository</name>
+   <url>https://maven.xwiki.org/externals/</url>
+  </repository>
+ </repositories>
+ 
+  <dependencies>
+	<dependency>
+	    <groupId>com.oracle.jdbc</groupId>
+	    <artifactId>ojdbc8</artifactId>
+	    <version>${oracle.jdbc.version}</version>
+	</dependency>
+    <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+    <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>${jog4j.version}</version>
+    </dependency>  
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+</project>
